@@ -8,7 +8,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const menu = ["Home", "About", "Services", "Projects", "Contact"];
+  const menu = ["Home", "About", "Services", "Products", "Projects", "Contact"];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,7 +23,9 @@ export default function Navbar() {
   return (
     <header
       className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/90 backdrop-blur-md shadow-md" : "bg-transparent"
+        scrolled || open
+          ? "bg-white/90 backdrop-blur-md shadow-md"
+          : "bg-transparent"
       }`}
     >
       <div className="container-custom relative flex h-20 items-center justify-between">
@@ -69,26 +71,34 @@ export default function Navbar() {
         >
           <span
             className={`absolute h-[2px] w-6 transition-all duration-300 ${
-              scrolled ? "bg-gray-800" : "bg-white"
+              scrolled || open ? "bg-gray-800" : "bg-white"
             } ${open ? "rotate-45" : "-translate-y-2"}`}
           />
           <span
             className={`absolute h-[2px] w-6 transition-all duration-300 ${
-              scrolled ? "bg-gray-800" : "bg-white"
+              scrolled || open ? "bg-gray-800" : "bg-white"
             } ${open ? "opacity-0" : ""}`}
           />
           <span
             className={`absolute h-[2px] w-6 transition-all duration-300 ${
-              scrolled ? "bg-gray-800" : "bg-white"
+              scrolled || open ? "bg-gray-800" : "bg-white"
             } ${open ? "-rotate-45" : "translate-y-2"}`}
           />
         </button>
       </div>
 
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ${
-          open ? "max-h-96 border-t bg-white" : "max-h-0"
-        }`}
+        className={`
+    md:hidden
+    fixed left-0 top-20 w-full
+    bg-white shadow-xl
+    transition-all duration-300 ease-out
+    ${
+      open
+        ? "opacity-100 translate-y-0"
+        : "opacity-0 -translate-y-4 pointer-events-none"
+    }
+  `}
       >
         <ul className="container-custom py-6 flex flex-col gap-6 text-gray-700 font-medium">
           {menu.map((item) => (
@@ -96,7 +106,12 @@ export default function Navbar() {
               <Link
                 href={`/${item === "Home" ? "" : item.toLowerCase()}`}
                 onClick={() => setOpen(false)}
-                className="block transition-colors hover:text-primary"
+                className="
+  block py-2
+  transition-all duration-200
+  hover:text-primary
+  hover:translate-x-2
+"
               >
                 {item}
               </Link>

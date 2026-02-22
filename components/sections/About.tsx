@@ -5,7 +5,6 @@ export default function About() {
   return (
     <section className="py-20 bg-white">
       <div className="container-custom grid md:grid-cols-2 gap-12 items-center">
-
         <div className="relative w-full h-[320px] md:h-[420px]">
           <Image
             src="/images/project/banner.jpg"
@@ -40,12 +39,19 @@ export default function About() {
 
           <Link
             href="/about"
-            className="inline-block mt-8 bg-primary text-white px-6 py-3 rounded-md font-semibold hover:opacity-90 transition"
+            className="
+    inline-block mt-8
+    bg-primary text-white
+    px-6 py-3 rounded-md font-semibold
+    w-full sm:w-auto
+    transition-all duration-300 ease-out
+    hover:-translate-y-0.5 hover:shadow-lg
+    active:translate-y-0
+  "
           >
             Learn More
           </Link>
         </div>
-
       </div>
     </section>
   );

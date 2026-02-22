@@ -1,23 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-
-const services = [
-  {
-    title: "HVAC System",
-    desc: "Design, installation, and maintenance of HVAC systems for industrial facilities.",
-    image: "/images/services/hvac.jpg",
-  },
-  {
-    title: "Mechanical Works",
-    desc: "Mechanical equipment installation including piping and fabrication.",
-    image: "/images/services/mechanical.jpg",
-  },
-  {
-    title: "Electrical System",
-    desc: "Electrical installation and power distribution solutions.",
-    image: "/images/services/electrical.jpg",
-  },
-];
+import { services } from "@/data/services";
 
 export default function Services() {
   return (
@@ -32,7 +15,7 @@ export default function Services() {
         </h2>
 
         <div className="grid gap-8 mt-14 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, i) => (
+          {services.slice(0, 3).map((service, i) => (
             <div
               key={i}
               className="bg-white rounded-xl overflow-hidden shadow-sm

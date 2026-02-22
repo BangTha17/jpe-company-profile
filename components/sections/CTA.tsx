@@ -9,21 +9,32 @@ export default function CTA() {
         </h2>
 
         <p className="mt-6 text-white/80 max-w-2xl mx-auto">
-          We provide reliable engineering solutions tailored to your
-          operational needs. Let’s discuss how we can support your next project.
+          We provide reliable engineering solutions tailored to your operational
+          needs. Let’s discuss how we can support your next project.
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Link
             href="/contact"
-            className="bg-secondary px-8 py-3 rounded-md font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            className="
+    bg-secondary px-8 py-3 rounded-md font-semibold
+    transition-all duration-300 ease-out
+    hover:-translate-y-0.5 hover:shadow-lg
+    active:translate-y-0
+  "
           >
             Contact Us
           </Link>
 
           <Link
             href="/services"
-            className="border border-white/70 px-8 py-3 rounded-md font-semibold transition-all duration-300 hover:bg-white hover:text-primary"
+            className="
+    border border-white/70 px-8 py-3 rounded-md font-semibold
+    transition-all duration-300 ease-out
+    hover:bg-white hover:text-primary
+    hover:-translate-y-0.5 hover:shadow-lg
+    active:translate-y-0
+  "
           >
             Our Services
           </Link>
