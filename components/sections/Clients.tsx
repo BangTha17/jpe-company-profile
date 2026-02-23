@@ -11,14 +11,14 @@ const clients = [
 
 export default function Clients() {
   return (
-    <section className="py-20 bg-white">
+    <section id="client" className="py-20 bg-white">
       <div className="container-custom text-center">
         <p className="text-secondary uppercase tracking-wide text-sm font-semibold">
           Trusted By
         </p>
 
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3">
-          Companies We Have Worked With
+          Perusahaan yang Pernah Bekerja Sama dengan Kami
         </h2>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 items-center mt-14">

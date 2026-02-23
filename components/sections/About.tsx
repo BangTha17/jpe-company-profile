@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <section className="py-20 bg-white">
+    <section id="about" className="py-20 bg-white">
       <div className="container-custom grid md:grid-cols-2 gap-12 items-center">
         <div className="relative w-full h-[320px] md:h-[420px]">
           <Image
-            src="/images/project/banner.jpg"
+            src="/images/banner/banner.jpg"
             alt="Company Project"
             fill
             className="object-cover rounded-xl"
@@ -23,22 +23,25 @@ export default function About() {
             PT Jaya Perkasa Engitech
           </h2>
 
-          <p className="mt-6 text-gray-600">
-            PT Jaya Perkasa Engitech is an industrial equipment contractor
-            specializing in HVAC, mechanical, and electrical systems for
-            manufacturing and commercial facilities. We deliver reliable
-            engineering solutions supported by experienced professionals and
-            quality workmanship.
+          <p className="text-gray-600 leading-relaxed mb-6">
+            PT Jaya Perkasa Engitech adalah perusahaan yang bergerak di bidang
+            <span className="font-semibold">
+              {" "}
+              General Contractor for Industrial Equipment
+            </span>
+            . Dengan semangat kewirausahaan, kami berkomitmen untuk terus
+            membangun, berkarya, dan unggul dalam menghadapi dinamika industri
+            serta persaingan bisnis yang semakin berkembang.
           </p>
 
-          <ul className="mt-6 space-y-3 text-gray-700">
-            <li>✔ Professional Engineering Team</li>
-            <li>✔ Industrial Project Experience</li>
-            <li>✔ Quality & Safety Commitment</li>
+          <ul className="space-y-3 text-gray-700">
+            <li>✔ Tenaga Profesional & Berpengalaman</li>
+            <li>✔ Solusi Industrial Equipment Terpercaya</li>
+            <li>✔ Komitmen Kualitas & Profesionalisme</li>
           </ul>
 
           <Link
-            href="/about"
+            href="#projects"
             className="
     inline-block mt-8
     bg-primary text-white
@@ -49,7 +52,7 @@ export default function About() {
     active:translate-y-0
   "
           >
-            Learn More
+            Lihat Proyek Kami
           </Link>
         </div>
       </div>

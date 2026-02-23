@@ -8,7 +8,14 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const menu = ["Home", "About", "Services", "Products", "Projects", "Contact"];
+  const menu = [
+    { name: "Home", href: "#hero" },
+    { name: "About", href: "#about" },
+    { name: "Services & Products", href: "#services-products" },
+    { name: "Projects", href: "#projects" },
+    { name: "Clients", href: "#client" },
+    { name: "Contact", href: "#contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,22 +50,22 @@ export default function Navbar() {
         <nav className="hidden md:block absolute left-1/2 -translate-x-1/2">
           <ul className="flex items-center gap-10 text-sm font-medium">
             {menu.map((item) => (
-              <li key={item}>
+              <li key={item.name}>
                 <Link
-                  href={`/${item === "Home" ? "" : item.toLowerCase()}`}
+                  href={item.href}
                   className={`relative pb-1 transition-colors duration-300
-                  ${
-                    scrolled
-                      ? "text-gray-800 hover:text-primary"
-                      : "text-white hover:text-secondary"
-                  }
-                  after:absolute after:left-0 after:bottom-0
-                  after:h-[2px] after:w-0
-                  after:bg-primary
-                  after:transition-all after:duration-300
-                  hover:after:w-full`}
+      ${
+        scrolled
+          ? "text-gray-800 hover:text-primary"
+          : "text-white hover:text-secondary"
+      }
+      after:absolute after:left-0 after:bottom-0
+      after:h-[2px] after:w-0
+      after:bg-primary
+      after:transition-all after:duration-300
+      hover:after:w-full`}
                 >
-                  {item}
+                  {item.name}
                 </Link>
               </li>
             ))}
@@ -102,18 +109,18 @@ export default function Navbar() {
       >
         <ul className="container-custom py-6 flex flex-col gap-6 text-gray-700 font-medium">
           {menu.map((item) => (
-            <li key={item}>
+            <li key={item.name}>
               <Link
-                href={`/${item === "Home" ? "" : item.toLowerCase()}`}
+                href={item.href}
                 onClick={() => setOpen(false)}
                 className="
-  block py-2
-  transition-all duration-200
-  hover:text-primary
-  hover:translate-x-2
-"
+        block py-2
+        transition-all duration-200
+        hover:text-primary
+        hover:translate-x-2
+      "
               >
-                {item}
+                {item.name}
               </Link>
             </li>
           ))}

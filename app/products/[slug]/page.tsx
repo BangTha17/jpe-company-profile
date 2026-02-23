@@ -1,7 +1,7 @@
 import { getProducts } from "@/lib/sheets";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft} from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 export default async function ProductDetail({
   params,
@@ -63,9 +63,10 @@ export default async function ProductDetail({
               <Image
                 src={product.image}
                 alt={product.name}
-                fill
-                className="object-contain"
+                width={600}
+                height={600}
                 priority
+                className="object-contain"
               />
             </div>
           </div>

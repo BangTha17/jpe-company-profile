@@ -74,6 +74,7 @@ export default async function ProductsPage() {
                         src={product.image}
                         alt={product.name}
                         fill
+                        loading="lazy"
                         className="object-contain p-6 transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>

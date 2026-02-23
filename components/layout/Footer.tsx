@@ -17,33 +17,47 @@ export default function Footer() {
             />
 
             <p className="text-white/70 text-sm leading-relaxed">
-              PT Jaya Perkasa Engitech provides reliable engineering and
-              industrial solutions including HVAC, mechanical, and electrical
-              systems for various industries.
+              PT Jaya Perkasa Engitech adalah perusahaan yang bergerak di bidang
+              General Contractor for Industrial Equipment.
             </p>
           </div>
 
           {/* Company */}
           <div>
-            <h4 className="font-semibold mb-5">Company</h4>
+            <h4 className="font-semibold mb-5">Navigation</h4>
             <ul className="space-y-3 text-white/70 text-sm">
               <li>
-                <Link href="/about" className="hover:text-white">
+                <Link href="#hero" className="hover:text-white">
+                  Home
+                </Link>
+              </li>
+
+              <li>
+                <Link href="#about" className="hover:text-white">
                   About
                 </Link>
               </li>
+
               <li>
-                <Link href="/projects" className="hover:text-white">
+                <Link href="#services-products" className="hover:text-white">
+                  Services & Products
+                </Link>
+              </li>
+
+              <li>
+                <Link href="#whychoose" className="hover:text-white">
+                  Why Choose Us
+                </Link>
+              </li>
+
+              <li>
+                <Link href="#projects" className="hover:text-white">
                   Projects
                 </Link>
               </li>
+
               <li>
-                <Link href="/services" className="hover:text-white">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-white">
+                <Link href="#contact" className="hover:text-white">
                   Contact
                 </Link>
               </li>
@@ -66,9 +80,14 @@ export default function Footer() {
             <h4 className="font-semibold mb-5">Contact</h4>
 
             <ul className="space-y-3 text-white/70 text-sm">
-              <li>Bekasi, West Java, Indonesia</li>
-              <li>+62 812-xxxx-xxxx</li>
-              <li>info@jpe.co.id</li>
+              <li>
+                Jl. Kavling Hankam 5 Blok E No. 190 rt. 007 rw.021, Kel. Setia
+                Mekar, Kec. Tambun Selatan, Kab. Bekasi 17519
+              </li>
+              <li>+62213831905756 (Office)</li>
+              <li>+6281213647404 (Rahmat.H)</li>
+              <li>+6281806618006 (Didin)</li>
+              <li>jayaperkasaengitech@gmail.com</li>
             </ul>
           </div>
         </div>
