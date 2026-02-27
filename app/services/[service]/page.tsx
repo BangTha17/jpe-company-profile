@@ -71,6 +71,11 @@ import { ArrowLeft } from "lucide-react";
           image: "/images/services/mechanical-pump.jpg",
           desc: "Perawatan pompa distribusi air industri.",
         },
+        {
+          title: "Replacement Bearing Mianroll Mesin Tableting",
+          image: "/images/services/mechanical-tableting.jpg",
+          desc: "Penggantian bearing mesin tableting untuk menjaga performa optimal.",
+        },
       ],
     },
     pip: {
