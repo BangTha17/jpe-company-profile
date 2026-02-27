@@ -2,97 +2,92 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
-/* ================================================= SERVICES DATA (WITH SUB SERVICE IMAGES) ================================================= */ const servicesData =
-  {
-    electrical: {
-      title: "Electrical Services",
-      description:
-        "Layanan instalasi dan maintenance sistem kelistrikan industri untuk memastikan operasional yang aman dan stabil.",
-      hero: "/images/services/electrical.jpg",
-      items: [
-        {
-          title: "Annual Maintenance Trafo",
-          image: "/images/services/electrical-trafo.jpg",
-          desc: "Perawatan rutin trafo untuk menjaga stabilitas distribusi daya.",
-        },
-        {
-          title: "Maintenance Panel Kubikel",
-          image: "/images/services/electrical-panel.jpg",
-          desc: "Inspeksi dan maintenance panel kubikel sesuai standar industri.",
-        },
-      ],
-    },
-    hvac: {
-      title: "HVAC Services",
-      description:
-        "Solusi sistem pendingin dan tata udara industri dengan performa optimal.",
-      hero: "/images/services/hvac.jpg",
-      items: [
-        {
-          title: "Maintenance AC",
-          image: "/images/services/hvac-ac.jpg",
-          desc: "Perawatan sistem AC industri untuk efisiensi energi maksimal.",
-        },
-        {
-          title: "Overhaul & Balancing Fan",
-          image: "/images/services/hvac-fan.jpg",
-          desc: "Optimasi airflow melalui balancing dan overhaul fan.",
-        },
-        {
-          title: "Replacement Coil AHU",
-          image: "/images/services/hvac-ahu.jpg",
-          desc: "Penggantian coil AHU untuk meningkatkan performa pendinginan.",
-        },
-        {
-          title: "Retrofit Fan AHU",
-          image: "/images/services/hvac-retrofit.jpg",
-          desc: "Upgrade fan AHU untuk efisiensi dan performa lebih tinggi.",
-        },
-      ],
-    },
-    mechanical: {
-      title: "Mechanical Services",
-      description:
-        "Perawatan mesin industri untuk menjaga produktivitas operasional.",
-      hero: "/images/services/mechanical.jpg",
-      items: [
-        {
-          title: "Maintenance Genset Hydrant",
-          image: "/images/services/mechanical-genset.jpg",
-          desc: "Maintenance genset dan hydrant system secara berkala.",
-        },
-        {
-          title: "Overhaul Mesin Supermixer",
-          image: "/images/services/mechanical-mixer.jpg",
-          desc: "Overhaul mesin produksi untuk menjaga performa optimal.",
-        },
-        {
-          title: "Overhaul Pompa Water Supply",
-          image: "/images/services/mechanical-pump.jpg",
-          desc: "Perawatan pompa distribusi air industri.",
-        },
-        {
-          title: "Replacement Bearing Mianroll Mesin Tableting",
-          image: "/images/services/mechanical-tableting.jpg",
-          desc: "Penggantian bearing mesin tableting untuk menjaga performa optimal.",
-        },
-      ],
-    },
-    pip: {
-      title: "Piping Services",
-      description:
-        "Instalasi sistem perpipaan industri termasuk steam piping dan utilitas produksi.",
-      hero: "/images/services/piping.jpg",
-      items: [
-        {
-          title: "Instalasi Pipa Steam",
-          image: "/images/services/piping-steam.jpg",
-          desc: "Pemasangan sistem steam piping sesuai standar engineering.",
-        },
-      ],
-    },
-  };
-/* ================================================= PAGE ================================================= */ export default async function Page({
+
+const servicesData = {
+  electrical: {
+    title: "Electrical Services",
+    description:
+      "Layanan instalasi dan maintenance sistem kelistrikan industri untuk memastikan operasional yang aman dan stabil.",
+    hero: "/images/services/electrical.jpg",
+    items: [
+      {
+        title: "Annual Maintenance Trafo & Panel Kubikel",
+        image: "/images/services/electrical-trafo.jpg",
+        desc: "Perawatan rutin trafo dan Inspeksi serta maintenance panel kubikel untuk menjaga stabilitas distribusi daya.",
+      },
+    ],
+  },
+  hvac: {
+    title: "HVAC Services",
+    description:
+      "Solusi sistem pendingin dan tata udara industri dengan performa optimal.",
+    hero: "/images/services/hvac.jpg",
+    items: [
+      {
+        title: "Maintenance AC",
+        image: "/images/services/hvac-ac.jpg",
+        desc: "Perawatan sistem AC industri untuk efisiensi energi maksimal.",
+      },
+      {
+        title: "Overhaul & Balancing Fan",
+        image: "/images/services/hvac-fan.jpg",
+        desc: "Optimasi airflow melalui balancing dan overhaul fan.",
+      },
+      {
+        title: "Replacement Coil AHU",
+        image: "/images/services/hvac-ahu.jpg",
+        desc: "Penggantian coil AHU untuk meningkatkan performa pendinginan.",
+      },
+      {
+        title: "Retrofit Fan AHU",
+        image: "/images/services/hvac-retrofit.jpg",
+        desc: "Upgrade fan AHU untuk efisiensi dan performa lebih tinggi.",
+      },
+    ],
+  },
+  mechanical: {
+    title: "Mechanical Services",
+    description:
+      "Perawatan mesin industri untuk menjaga produktivitas operasional.",
+    hero: "/images/services/mechanical.jpg",
+    items: [
+      {
+        title: "Maintenance Genset Hydrant",
+        image: "/images/services/mechanical-genset.jpg",
+        desc: "Maintenance genset dan hydrant system secara berkala.",
+      },
+      {
+        title: "Overhaul Mesin Supermixer",
+        image: "/images/services/mechanical-mixer.jpg",
+        desc: "Overhaul mesin produksi untuk menjaga performa optimal.",
+      },
+      {
+        title: "Overhaul Pompa Water Supply",
+        image: "/images/services/mechanical-pump.jpg",
+        desc: "Perawatan pompa distribusi air industri.",
+      },
+      {
+        title: "Replacement Bearing Mianroll Mesin Tableting",
+        image: "/images/services/mechanical-tableting.jpg",
+        desc: "Penggantian bearing mesin tableting untuk menjaga performa optimal.",
+      },
+    ],
+  },
+  pip: {
+    title: "Piping Services",
+    description:
+      "Instalasi sistem perpipaan industri termasuk steam piping dan utilitas produksi.",
+    hero: "/images/services/piping.jpg",
+    items: [
+      {
+        title: "Instalasi Pipa Steam",
+        image: "/images/services/piping-steam.jpg",
+        desc: "Pemasangan sistem steam piping sesuai standar engineering.",
+      },
+    ],
+  },
+};
+export default async function Page({
   params,
 }: {
   params: Promise<{ service: string }>;
@@ -154,17 +149,14 @@ import { ArrowLeft } from "lucide-react";
             >
               {" "}
               {/* IMAGE */}{" "}
-              <div className="relative h-[260px] md:h-[340px] overflow-hidden rounded-2xl">
-                {" "}
+              <div className="relative aspect-square max-w-[420px] w-full overflow-hidden rounded-xl">
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover transition-transform duration-700 hover:scale-105"
-                />{" "}
-                {/* subtle overlay */}{" "}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />{" "}
-              </div>{" "}
+                  className="object-contain transition-transform duration-700 hover:scale-105"
+                />
+              </div>
               {/* CONTENT */}{" "}
               <div className="max-w-lg">
                 {" "}
