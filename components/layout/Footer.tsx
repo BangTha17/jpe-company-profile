@@ -87,7 +87,8 @@ export default function Footer() {
               <li>+62213831905756 (Office)</li>
               <li>+6281213647404 (Rahmat.H)</li>
               <li>+6281806618006 (Didin)</li>
-              <li>jayaperkasaengitech@gmail.com</li>
+              <li>ho@jayaperkasaengitech.com</li>
+              <li>Admin@jayaperkasaengitech.com</li>
             </ul>
           </div>
         </div>

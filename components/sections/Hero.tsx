@@ -24,7 +24,7 @@ export default function Hero() {
 
         <div className="mt-8 md:mt-10 flex flex-col sm:flex-row justify-center gap-4">
           <Link
-            href="https://wa.me/62213831905756?text=Halo%20PT%20Jaya%20Perkasa%20Engitech,%20saya%20ingin%20konsultasi."
+            href="https://wa.me/6281213647404?text=Halo%20PT%20Jaya%20Perkasa%20Engitech,%20saya%20ingin%20konsultasi."
             target="_blank"
             rel="noopener noreferrer"
             className="bg-secondary px-6 py-3 rounded-md font-semibold w-full sm:w-auto
