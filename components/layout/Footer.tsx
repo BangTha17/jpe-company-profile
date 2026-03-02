@@ -84,7 +84,7 @@ export default function Footer() {
                 Jl. Kavling Hankam 5 Blok E No. 190 rt. 007 rw.021, Kel. Setia
                 Mekar, Kec. Tambun Selatan, Kab. Bekasi 17519
               </li>
-              <li>+62213831905756 (Office)</li>
+              <li>+622138319057 (Office)</li>
               <li>+6281213647404 (Rahmat.H)</li>
               <li>+6281806618006 (Didin)</li>
               <li>ho@jayaperkasaengitech.com</li>
